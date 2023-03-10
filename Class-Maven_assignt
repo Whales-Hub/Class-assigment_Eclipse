@@ -1,0 +1,18 @@
+const add = require('./math');
+
+describe('add', function() {
+  it('should add two numbers', function() {
+    const result = add(1, 2);
+    expect(result).to.equal(3);
+  });
+
+  it('should add negative numbers', function() {
+    const result = add(-1, -2);
+    expect(result).to.equal(-3);
+  });
+
+  it('should add decimals', function() {
+    const result = add(0.1, 0.2);
+    expect(result).to.be.closeTo(0.3, 0.0001);
+  });
+});
